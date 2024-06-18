@@ -1,6 +1,6 @@
 <?php
 
-class Posts extends Model {
+class Post extends Model {
 
     protected $table = 'posts';
 }
