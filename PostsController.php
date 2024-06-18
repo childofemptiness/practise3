@@ -1,6 +1,6 @@
 <?php
 
-class PostController {
+class PostsController {
 
     private $posts;
 
