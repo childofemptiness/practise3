@@ -52,16 +52,16 @@ class Model {
 
         foreach ($data as $key => $value) {
 
-            $set .= "$key = :$value, ";
+            $set .= "$key = :$key, ";
         }
 
         $set = rtrim($set, ', ');
 
-        $data['id'] = $data;
+        $data['id'] = $id;
 
-        $sql = "UPDATE $this->table SET $set WHERE id =: id";
+        $sql = "UPDATE $this->table SET $set WHERE id = :id";
 
-        return $this->db->query($sql. $data);
+        return $this->db->query($sql, $data);
     }
 
     public function delete($id) {
